@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Discover what D2T Venture provides — technology, creative digital solutions, data analytics and meaningful initiatives."
+    >
+
+    <title>D2T Venture | What We Provide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+
+        /* =================================================
+           SERVICES PAGE ONLY
+        ================================================= */
+
+        .services-page {
+
+            min-height: 100vh;
+
+            padding-top: 110px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 10%,
+                    rgba(212,175,55,0.08),
+                    transparent 30%
+                ),
+                #020202;
+
+            color: #f5f5f5;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .services-hero {
+
+            width: min(1000px, 88%);
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 55px 0 95px;
+        }
+
+
+        .services-label {
+
+            color: #d4af37;
+
+            font-size: 9px;
+
+            letter-spacing: 6px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .services-hero h1 {
+
+            font-family: 'Cinzel', serif;
+
+            font-size:
+                clamp(40px, 7vw, 76px);
+
+            font-weight: 400;
+
+            line-height: 1.15;
+        }
+
+
+        .services-hero h1 span {
+
+            color: #d4af37;
+        }
+
+
+        .services-hero p {
+
+            max-width: 700px;
+
+            margin: 25px auto 0;
+
+            color: #8e8e8e;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            font-weight: 300;
+        }
+
+
+        /* =========================
+           SERVICE INTRO
+        ========================= */
+
+        .service-intro {
+
+            width: min(1000px, 88%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+
+            padding-bottom: 100px;
+        }
+
+
+        .service-intro-card {
+
+            padding: 38px;
+
+            min-height: 250px;
+
+            border:
+                1px solid
+                rgba(212,175,55,0.15);
+
+            background:
+                rgba(255,255,255,0.015);
+        }
+
+
+        .service-intro-card small {
+
+            color: #d4af37;
+
+            font-size: 9px;
+
+            letter-spacing: 4px;
+        }
+
+
+        .service-intro-card h2 {
+
+            margin-top: 20px;
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 28px;
+
+            font-weight: 500;
+
+            line-height: 1.4;
+        }
+
+
+        .service-intro-card p {
+
+            margin-top: 15px;
+
+            color: #777;
+
+            font-size: 11px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-list {
+
+            padding:
+                110px 6%;
+
+            background: #050505;
+
+            border-top:
+                1px solid
+                rgba(212,175,55,0.08);
+        }
+
+
+        .services-heading {
+
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+
+        .services-heading small {
+
+            color: #d4af37;
+
+            font-size: 9px;
+
+            letter-spacing: 5px;
+        }
+
+
+        .services-heading h2 {
+
+            margin-top: 18px;
+
+            font-family: 'Cinzel', serif;
+
+            font-size:
+                clamp(30px, 5vw, 52px);
+
+            font-weight: 400;
+        }
+
+
+        .services-heading h2 span {
+
+            color: #d4af37;
+        }
+
+
+        .service-grid {
+
+            width: min(1100px, 100%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .service-card {
+
+            position: relative;
+
+            min-height: 330px;
+
+            padding: 32px;
+
+            border:
+                1px solid
+                rgba(212,175,55,0.16);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.025),
+                    rgba(255,255,255,0.005)
+                );
+
+            overflow: hidden;
+
+            transition:
+                transform .4s ease,
+                border-color .4s ease;
+        }
+
+
+        .service-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+
+            height: 150px;
+
+            right: -80px;
+
+            bottom: -80px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(212,175,55,0.08);
+
+            filter: blur(25px);
+
+            transition: .4s ease;
+        }
+
+
+        .service-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                rgba(212,175,55,0.55);
+        }
+
+
+        .service-card:hover::before {
+
+            transform:
+                scale(1.8);
+        }
+
+
+        .service-number {
+
+            color: #8a6508;
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 12px;
+        }
+
+
+        .service-icon {
+
+            margin-top: 38px;
+
+            color: #d4af37;
+
+            font-size: 30px;
+
+            text-shadow:
+                0 0 18px
+                rgba(212,175,55,0.35);
+        }
+
+
+        .service-card h3 {
+
+            margin-top: 18px;
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 22px;
+
+            font-weight: 500;
+        }
+
+
+        .service-card p {
+
+            margin-top: 12px;
+
+            color: #777;
+
+            font-size: 11px;
+
+            line-height: 1.85;
+        }
+
+
+        .service-link {
+
+            position: absolute;
+
+            left: 32px;
+
+            bottom: 27px;
+
+            color: #d4af37;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process-section {
+
+            padding:
+                110px 6%;
+
+            text-align: center;
+        }
+
+
+        .process-grid {
+
+            width: min(1000px, 100%);
+
+            margin: 60px auto 0;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .process-item {
+
+            padding: 28px 18px;
+
+            border:
+                1px solid
+                rgba(212,175,55,0.13);
+
+            background:
+                rgba(255,255,255,0.012);
+        }
+
+
+        .process-item strong {
+
+            display: block;
+
+            color: #d4af37;
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 25px;
+        }
+
+
+        .process-item h3 {
+
+            margin-top: 15px;
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 17px;
+
+            font-weight: 500;
+        }
+
+
+        .process-item p {
+
+            margin-top: 10px;
+
+            color: #707070;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .services-cta {
+
+            min-height: 55vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 7vw;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,0.08),
+                    transparent 35%
+                ),
+
+                #050505;
+
+            border-top:
+                1px solid
+                rgba(212,175,55,0.08);
+        }
+
+
+        .services-cta h2 {
+
+            max-width: 800px;
+
+            font-family: 'Cinzel', serif;
+
+            font-size:
+                clamp(30px, 5vw, 55px);
+
+            font-weight: 400;
+
+            line-height: 1.35;
+        }
+
+
+        .services-cta h2 span {
+
+            color: #d4af37;
+        }
+
+
+        .services-cta p {
+
+            max-width: 600px;
+
+            margin: 22px auto 32px;
+
+            color: #777;
+
+            font-size: 11px;
+
+            line-height: 1.9;
+        }
+
+
+        .services-cta a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            min-height: 52px;
+
+            padding: 0 28px;
+
+            text-decoration: none;
+
+            color: #050505;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #a47c12,
+                    #d4af37,
+                    #ffe9a6,
+                    #d4af37,
+                    #a47c12
+                );
+
+            background-size: 250% auto;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition: .3s ease;
+        }
+
+
+        .services-cta a:hover {
+
+            background-position: 100% center;
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 0 30px
+                rgba(212,175,55,0.2);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .service-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .process-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .service-intro {
+
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .services-page {
+
+                padding-top: 85px;
+            }
+
+
+            .service-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .process-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .services-hero {
+
+                padding:
+                    40px 0 70px;
+            }
+
+
+            .services-hero p {
+
+                font-size: 11px;
+            }
+
+
+            .service-intro-card {
+
+                padding: 28px;
+            }
+
+
+            .service-card {
+
+                min-height: 300px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =============================================
+         NAVIGATION
+    ============================================== -->
+
+    <header class="site-header">
+
+        <a
+            href="home.html"
+            class="site-logo"
+        >
+
+            D2T
+
+            <span>
+                VENTURE
+            </span>
+
+        </a>
+
+
+        <nav
+            class="main-nav"
+            aria-label="Main navigation"
+        >
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Me
+            </a>
+
+            <a
+                href="services.html"
+                class="active"
+            >
+                What We Provide
+            </a>
+
+            <a href="spreading-smiles.html">
+                Spreading Smiles
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =============================================
+         FLOATING ELEMENTS
+    ============================================== -->
+
+    <div
+        class="particles"
+        aria-hidden="true"
+    >
+
+        <span class="particle p1">✦</span>
+        <span class="particle p2">✧</span>
+        <span class="particle p3">✦</span>
+        <span class="particle p4">•</span>
+        <span class="particle p5">✧</span>
+        <span class="particle p6">✦</span>
+        <span class="particle p7">•</span>
+        <span class="particle p8">✧</span>
+
+    </div>
+
+
+
+    <!-- =============================================
+         SERVICES PAGE
+    ============================================== -->
+
+    <main class="services-page">
+
+
+        <!-- HERO -->
+
+        <section class="services-hero">
+
+            <p class="services-label">
+                WHAT D2T CAN CREATE
+            </p>
+
+
+            <h1>
+
+                Ideas Into
+                <span>Possibilities.</span>
+
+            </h1>
+
+
+            <p>
+
+                D2T Venture brings technology, creativity,
+                digital experiences and purpose-driven ideas
+                together to build something that matters.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- INTRO -->
+
+        <section class="service-intro">
+
+
+            <article class="service-intro-card">
+
+                <small>
+                    THE VISION
+                </small>
+
+
+                <h2>
+                    Technology with
+                    <span style="color:#d4af37;">
+                        purpose.
+                    </span>
+                </h2>
+
+
+                <p>
+
+                    Technology should not simply exist.
+                    It should solve problems, improve experiences
+                    and create opportunities.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="service-intro-card">
+
+                <small>
+                    THE APPROACH
+                </small>
+
+
+                <h2>
+                    Creative ideas,
+                    <span style="color:#d4af37;">
+                        thoughtfully built.
+                    </span>
+                </h2>
+
+
+                <p>
+
+                    From digital experiences to data-driven
+                    solutions, every idea starts with understanding
+                    the purpose behind it.
+
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- SERVICES -->
+
+        <section class="services-list">
+
+
+            <div class="services-heading">
+
+                <small>
+                    OUR AREAS
+                </small>
+
+
+                <h2>
+                    What We
+                    <span>Provide.</span>
+                </h2>
+
+            </div>
+
+
+
+            <div class="service-grid">
+
+
+                <!-- 01 -->
+
+                <article class="service-card">
+
+                    <span class="service-number">
+                        01
+                    </span>
+
+
+                    <div class="service-icon">
+                        ◇
+                    </div>
+
+
+                    <h3>
+                        Website & Digital
+                        Experiences
+                    </h3>
+
+
+                    <p>
+
+                        Modern, responsive and interactive
+                        websites designed to give brands,
+                        individuals and ideas a strong digital
+                        presence.
+
+                    </p>
+
+
+                    <span class="service-link">
+                        DIGITAL
+                    </span>
+
+                </article>
+
+
+
+                <!-- 02 -->
+
+                <article class="service-card">
+
+                    <span class="service-number">
+                        02
+                    </span>
+
+
+                    <div class="service-icon">
+                        ◈
+                    </div>
+
+
+                    <h3>
+                        Data Analytics
+                    </h3>
+
+
+                    <p>
+
+                        Transforming raw information into
+                        meaningful insights through analytics,
+                        dashboards, visualization and
+                        data-driven thinking.
+
+                    </p>
+
+
+                    <span class="service-link">
+                        DATA
+                    </span>
+
+                </article>
+
+
+
+                <!-- 03 -->
+
+                <article class="service-card">
+
+                    <span class="service-number">
+                        03
+                    </span>
+
+
+                    <div class="service-icon">
+                        ✦
+                    </div>
+
+
+                    <h3>
+                        Creative Design
+                    </h3>
+
+
+                    <p>
+
+                        Visual concepts, digital content and
+                        creative experiences designed to make
+                        ideas stand out.
+
+                    </p>
+
+
+                    <span class="service-link">
+                        CREATIVE
+                    </span>
+
+                </article>
+
+
+
+                <!-- 04 -->
+
+                <article class="service-card">
+
+                    <span class="service-number">
+                        04
+                    </span>
+
+
+                    <div class="service-icon">
+                        ⌁
+                    </div>
+
+
+                    <h3>
+                        Technology Projects
+                    </h3>
+
+
+                    <p>
+
+                        Technology-focused projects involving
+                        programming, IoT, artificial intelligence,
+                        automation and practical problem solving.
+
+                    </p>
+
+
+                    <span class="service-link">
+                        TECHNOLOGY
+                    </span>
+
+                </article>
+
+
+
+                <!-- 05 -->
+
+                <article class="service-card">
+
+                    <span class="service-number">
+                        05
+                    </span>
+
+
+                    <div class="service-icon">
+                        ◎
+                    </div>
+
+
+                    <h3>
+                        Personal Branding
+                    </h3>
+
+
+                    <p>
+
+                        Helping individuals build a meaningful
+                        and professional digital identity through
+                        thoughtful presentation and content.
+
+                    </p>
+
+
+                    <span class="service-link">
+                        BRANDING
+                    </span>
+
+                </article>
+
+
+
+                <!-- 06 -->
+
+                <article class="service-card">
+
+                    <span class="service-number">
+                        06
+                    </span>
+
+
+                    <div class="service-icon">
+                        ♢
+                    </div>
+
+
+                    <h3>
+                        Purpose-Driven
+                        Initiatives
+                    </h3>
+
+
+                    <p>
+
+                        Ideas that go beyond business —
+                        creating digital spaces and initiatives
+                        that encourage kindness and positive
+                        social impact.
+
+                    </p>
+
+
+                    <span class="service-link">
+                        IMPACT
+                    </span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROCESS -->
+
+        <section class="process-section">
+
+
+            <div class="services-heading">
+
+                <small>
+                    HOW WE THINK
+                </small>
+
+
+                <h2>
+                    From Idea
+                    <span>To Reality.</span>
+                </h2>
+
+            </div>
+
+
+
+            <div class="process-grid">
+
+
+                <article class="process-item">
+
+                    <strong>
+                        01
+                    </strong>
+
+                    <h3>
+                        Discover
+                    </h3>
+
+                    <p>
+                        Understand the idea,
+                        problem and purpose.
+                    </p>
+
+                </article>
+
+
+
+                <article class="process-item">
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <h3>
+                        Imagine
+                    </h3>
+
+                    <p>
+                        Explore creative possibilities
+                        and meaningful solutions.
+                    </p>
+
+                </article>
+
+
+
+                <article class="process-item">
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <h3>
+                        Build
+                    </h3>
+
+                    <p>
+                        Turn the chosen idea into
+                        a practical digital experience.
+                    </p>
+
+                </article>
+
+
+
+                <article class="process-item">
+
+                    <strong>
+                        04
+                    </strong>
+
+                    <h3>
+                        Impact
+                    </h3>
+
+                    <p>
+                        Create something useful,
+                        memorable and purposeful.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CTA -->
+
+        <section class="services-cta">
+
+            <p class="services-label">
+                HAVE AN IDEA?
+            </p>
+
+
+            <h2>
+
+                Let's turn your idea
+                into <span>something real.</span>
+
+            </h2>
+
+
+            <p>
+
+                Whether it is a digital project, creative idea,
+                technology solution or meaningful initiative,
+                let's explore what can be built together.
+
+            </p>
+
+
+            <a href="contact.html">
+
+                Start a Conversation
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =============================================
+         FOOTER
+    ============================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <strong>D2T</strong>
+
+            <span>
+                VENTURE
+            </span>
+
+        </div>
+
+
+        <p>
+            Create. Connect. Inspire.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 D2T Venture. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =============================================
+         MOBILE MENU
+    ============================================== -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const mainNav =
+            document.querySelector(".main-nav");
+
+
+        menuToggle.addEventListener(
+            "click",
+            () => {
+
+                const isOpen =
+                    mainNav.classList.toggle("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(".main-nav a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        mainNav.classList.remove("open");
+
+                    }
+                );
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
