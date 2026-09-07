@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>D2T Venture | Contact</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="../style.css">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+
+    /* =========================================
+       CONTACT PAGE
+    ========================================= */
+
+    body {
+        background: #050505;
+        color: #ffffff;
+        overflow-x: hidden;
+    }
+
+
+    /* =========================================
+       PARTICLES
+    ========================================= */
+
+    .contact-particles {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .contact-particles span {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: #d4af37;
+        border-radius: 50%;
+        opacity: 0.4;
+        animation: contactFloat 10s linear infinite;
+    }
+
+    .contact-particles span:nth-child(1) {
+        left: 10%;
+        top: 25%;
+    }
+
+    .contact-particles span:nth-child(2) {
+        left: 25%;
+        top: 70%;
+        animation-delay: 2s;
+    }
+
+    .contact-particles span:nth-child(3) {
+        left: 45%;
+        top: 35%;
+        animation-delay: 4s;
+    }
+
+    .contact-particles span:nth-child(4) {
+        left: 65%;
+        top: 75%;
+        animation-delay: 1s;
+    }
+
+    .contact-particles span:nth-child(5) {
+        left: 82%;
+        top: 30%;
+        animation-delay: 3s;
+    }
+
+    @keyframes contactFloat {
+
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+
+        30% {
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateY(-120px);
+            opacity: 0;
+        }
+
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .contact-hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 20px 70px;
+    }
+
+    .contact-hero-content {
+        max-width: 900px;
+    }
+
+    .contact-mini-title {
+        color: #d4af37;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        margin-bottom: 25px;
+    }
+
+    .contact-hero h1 {
+        font-family: 'Cinzel', serif;
+        font-size: clamp(42px, 7vw, 78px);
+        line-height: 1.1;
+        margin: 0;
+    }
+
+    .contact-hero h1 span {
+        color: #d4af37;
+    }
+
+    .contact-line {
+        width: 90px;
+        height: 2px;
+        background: #d4af37;
+        margin: 30px auto;
+    }
+
+    .contact-hero p {
+        max-width: 680px;
+        margin: auto;
+        color: #aaa;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+
+    /* =========================================
+       MAIN CONTACT AREA
+    ========================================= */
+
+    .contact-section {
+        padding: 80px 7% 110px;
+    }
+
+    .contact-wrapper {
+        max-width: 1150px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 60px;
+        align-items: start;
+    }
+
+
+    /* =========================================
+       INFO SIDE
+    ========================================= */
+
+    .contact-info {
+        padding: 45px;
+        border: 1px solid rgba(212,175,55,0.25);
+        background: linear-gradient(
+            145deg,
+            rgba(212,175,55,0.05),
+            rgba(255,255,255,0.015)
+        );
+    }
+
+    .contact-info h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+
+    .contact-info > p {
+        color: #999;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.8;
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+
+    .contact-detail {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        margin-bottom: 28px;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        border: 1px solid #d4af37;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d4af37;
+        font-size: 18px;
+    }
+
+    .contact-detail h4 {
+        margin: 0 0 6px;
+        font-family: 'Cinzel', serif;
+        font-size: 15px;
+    }
+
+    .contact-detail p {
+        margin: 0;
+        color: #999;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .contact-detail a {
+        color: #999;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+    .contact-detail a:hover {
+        color: #d4af37;
+    }
+
+
+    /* =========================================
+       FORM
+    ========================================= */
+
+    .contact-form-box {
+        padding: 45px;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.015);
+    }
+
+    .contact-form-box h2 {
+        font-family: 'Cinzel', serif;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 9px;
+        color: #cfcfcf;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 16px;
+        background: #090909;
+        border: 1px solid rgba(255,255,255,0.12);
+        color: #ffffff;
+        outline: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        transition: 0.3s ease;
+    }
+
+    .form-group textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        border-color: #d4af37;
+        box-shadow: 0 0 15px rgba(212,175,55,0.08);
+    }
+
+    .form-group select option {
+        background: #090909;
+        color: #ffffff;
+    }
+
+    .contact-submit {
+        width: 100%;
+        padding: 16px;
+        margin-top: 5px;
+        background: transparent;
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .contact-submit:hover {
+        background: #d4af37;
+        color: #050505;
+        box-shadow: 0 10px 30px rgba(212,175,55,0.2);
+    }
+
+
+    /* =========================================
+       BOTTOM MESSAGE
+    ========================================= */
+
+    .contact-bottom {
+        text-align: center;
+        padding: 90px 20px;
+        background:
+            radial-gradient(
+                circle at center,
+                rgba(212,175,55,0.06),
+                transparent 60%
+            );
+    }
+
+    .contact-bottom h2 {
+        font-family: 'Cinzel', serif;
+        font-size: clamp(28px, 4vw, 45px);
+        margin-bottom: 20px;
+    }
+
+    .contact-bottom h2 span {
+        color: #d4af37;
+    }
+
+    .contact-bottom p {
+        max-width: 650px;
+        margin: auto;
+        color: #999;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.8;
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+        .contact-wrapper {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .contact-hero {
+            min-height: 65vh;
+            padding-top: 100px;
+        }
+
+        .contact-section {
+            padding: 60px 6% 80px;
+        }
+
+        .contact-info,
+        .contact-form-box {
+            padding: 30px 22px;
+        }
+
+        .contact-hero p {
+            font-size: 14px;
+        }
+
+        .contact-bottom {
+            padding: 70px 20px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- FLOATING PARTICLES -->
+
+<div class="contact-particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="home.html" class="logo">
+            D2T VENTURE
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+        >
+            ☰
+        </button>
+
+        <nav
+            class="main-nav"
+            id="mainNav"
+        >
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="spreading-smiles.html">
+                Spreading Smiles
+            </a>
+
+            <a
+                href="contact.html"
+                class="active"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+        <div class="contact-mini-title">
+            LET'S CONNECT
+        </div>
+
+        <h1>
+            LET'S CREATE
+            <span>TOGETHER.</span>
+        </h1>
+
+        <div class="contact-line"></div>
+
+        <p>
+            Have an idea, a project, a business vision,
+            or simply something you'd love to build?
+            Let's start the conversation and turn
+            possibilities into something real.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT AREA -->
+
+<section class="contact-section">
+
+    <div class="contact-wrapper">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <h2>
+                Let's Talk.
+            </h2>
+
+            <p>
+                Every great project starts with a simple
+                conversation. Tell us what you have in mind
+                and let's explore what we can create together.
+            </p>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <h4>
+                        EMAIL
+                    </h4>
+
+                    <p>
+
+                        <a
+                            href="mailto:rrajeshwari88398@gmail.com"
+                        >
+                            rrajeshwari88398@gmail.com
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECTS -->
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <h4>
+                        PROJECTS
+                    </h4>
+
+                    <p>
+                        Websites • Analytics • Design<br>
+                        Technology • Branding
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- GITHUB -->
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+                    ◉
+                </div>
+
+                <div>
+
+                    <h4>
+                        GITHUB
+                    </h4>
+
+                    <p>
+
+                        <a
+                            href="https://github.com/BugBae"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            github.com/BugBae
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LINKEDIN -->
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+                    in
+                </div>
+
+                <div>
+
+                    <h4>
+                        LINKEDIN
+                    </h4>
+
+                    <p>
+
+                        <a
+                            href="https://www.linkedin.com/in/rajeshwari-r-599a5a264"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            linkedin.com/in/rajeshwari-r-599a5a264
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMMUNITY -->
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+                    ♡
+                </div>
+
+                <div>
+
+                    <h4>
+                        COMMUNITY
+                    </h4>
+
+                    <p>
+                        Spreading Smiles —
+                        Ideas with purpose.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form-box">
+
+            <h2>
+                Start A Conversation
+            </h2>
+
+
+            <form id="contactForm">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="project">
+                        What are you looking for?
+                    </label>
+
+                    <select
+                        id="project"
+                        name="project"
+                    >
+
+                        <option value="">
+                            Select an option
+                        </option>
+
+                        <option value="website">
+                            Website / Digital Experience
+                        </option>
+
+                        <option value="analytics">
+                            Data Analytics
+                        </option>
+
+                        <option value="design">
+                            Creative Design
+                        </option>
+
+                        <option value="technology">
+                            Technology Project
+                        </option>
+
+                        <option value="branding">
+                            Personal Branding
+                        </option>
+
+                        <option value="initiative">
+                            Purpose-Driven Initiative
+                        </option>
+
+                        <option value="other">
+                            Something Else
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell us about your idea..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="contact-submit"
+                >
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOTTOM CTA -->
+
+<section class="contact-bottom">
+
+    <h2>
+        Your Idea Could Be The
+        <span>Next Beginning.</span>
+    </h2>
+
+    <p>
+        DREAM. BUILD. RISE.
+        <br><br>
+        D2T Venture — creating possibilities
+        with purpose.
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h3>
+            D2T VENTURE
+        </h3>
+
+        <p>
+            Create. Connect. Inspire.
+        </p>
+
+        <span>
+            © 2026 D2T Venture. All Rights Reserved.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            mainNav.classList.toggle("open");
+
+        }
+    );
+
+
+    /* =========================================
+       EMAILJS INITIALIZATION
+    ========================================== */
+
+    emailjs.init({
+        publicKey: "2K5j08HJo-kq40DaH"
+    });
+
+
+    /* =========================================
+       CONTACT FORM
+    ========================================== */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+
+    contactForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const submitButton =
+                document.querySelector(".contact-submit");
+
+
+            submitButton.innerText =
+                "SENDING...";
+
+            submitButton.disabled = true;
+
+
+            emailjs.send(
+                "service_q12d73q",
+                "template_4nygsww",
+                {
+                    name:
+                        document.getElementById("name").value.trim(),
+
+                    email:
+                        document.getElementById("email").value.trim(),
+
+                    project:
+                        document.getElementById("project").value,
+
+                    message:
+                        document.getElementById("message").value.trim()
+                }
+            )
+            .then(
+                function(response) {
+
+                    console.log(
+                        "Email sent successfully:",
+                        response
+                    );
+
+
+                    alert(
+                        "Message sent successfully! " +
+                        "Thank you for contacting D2T Venture."
+                    );
+
+
+                    contactForm.reset();
+
+
+                    submitButton.innerText =
+                        "SEND MESSAGE";
+
+                    submitButton.disabled =
+                        false;
+
+                }
+            )
+            .catch(
+                function(error) {
+
+                    console.error(
+                        "EmailJS Error:",
+                        error
+                    );
+
+
+                    alert(
+                        "Something went wrong while sending your message. " +
+                        "Please try again."
+                    );
+
+
+                    submitButton.innerText =
+                        "SEND MESSAGE";
+
+                    submitButton.disabled =
+                        false;
+
+                }
+            );
+
+        }
+    );
+
+</script>
+```
+
+</body>
+
+</html>

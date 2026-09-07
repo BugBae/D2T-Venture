@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>D2T Venture | About Me</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .about-page {
+            padding: 120px 8% 70px;
+            min-height: 100vh;
+        }
+
+        .about-intro {
+            display: grid;
+            grid-template-columns: 0.9fr 1.4fr;
+            gap: 70px;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about-portrait {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 430px;
+        }
+
+        .about-portrait img {
+            position: relative;
+            z-index: 2;
+            width: min(330px, 90%);
+            max-height: 430px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 25px rgba(212,175,55,0.22));
+        }
+
+        .about-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 15px;
+        }
+
+        .about-content h1 span {
+            color: #d4af37;
+        }
+
+        .about-content h2 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .about-content p {
+            line-height: 1.8;
+            margin-bottom: 18px;
+            opacity: 0.85;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 100px 0 45px;
+        }
+
+        .section-title h2 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: #d4af37;
+        }
+
+        .journey {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .journey-card {
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 18px;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .journey-card h3 {
+            color: #d4af37;
+            margin-bottom: 12px;
+        }
+
+        .journey-card p {
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        .skills-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(212,175,55,0.22);
+            border-radius: 15px;
+            background: rgba(255,255,255,0.03);
+            transition: 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+
+        .skill-card h3 {
+            color: #d4af37;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            opacity: 0.8;
+        }
+
+        .projects {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid rgba(212,175,55,0.25);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .project-card h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        .about-closing {
+            max-width: 850px;
+            margin: 100px auto 40px;
+            text-align: center;
+        }
+
+        .about-closing h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-closing p {
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 800px) {
+            .about-page {
+                padding: 100px 6% 50px;
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .about-portrait {
+                min-height: auto;
+            }
+
+            .about-portrait img {
+                width: min(280px, 85%);
+                max-height: 380px;
+            }
+
+            .section-title {
+                margin: 70px 0 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html">D2T Venture</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html" class="active">About Me</a>
+            <a href="services.html">Services</a>
+            <a href="spreading-smiles.html">Spreading Smiles</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="menu-toggle">
+            ☰
+        </div>
+    </nav>
+
+
+    <main class="about-page">
+
+        <!-- About Intro -->
+        <section class="about-intro">
+
+            <div class="about-portrait">
+                <img
+                    src="../images/d2t-sketch.png"
+                    alt="D2T Venture founder sketch"
+                >
+            </div>
+
+            <div class="about-content">
+
+                <h1>Hello, I'm <span>Rajeshwari</span></h1>
+
+                <h2>Founder of D2T Venture</h2>
+
+                <p>
+                    Welcome to D2T Venture — a space where creativity,
+                    technology, purpose and positive impact come together.
+                </p>
+
+                <p>
+                    I believe that technology is not only about building
+                    applications or solving technical problems. It is also
+                    about creating meaningful experiences, helping people
+                    and turning ideas into something valuable.
+                </p>
+
+                <p>
+                    D2T Venture is my way of bringing different passions
+                    together under one platform — technology, creativity,
+                    motivation, healthcare awareness and social impact.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Journey -->
+        <section>
+
+            <div class="section-title">
+                <h2>My <span>Journey</span></h2>
+                <p>Learning, creating and growing one step at a time.</p>
+            </div>
+
+            <div class="journey">
+
+                <div class="journey-card">
+                    <h3>Technology & Learning</h3>
+
+                    <p>
+                        My journey in Information Technology introduced me
+                        to programming, web development, data analytics,
+                        artificial intelligence and many other areas of
+                        technology.
+                    </p>
+                </div>
+
+                <div class="journey-card">
+                    <h3>Building Ideas</h3>
+
+                    <p>
+                        Through projects and practical experiences, I learned
+                        how ideas can be transformed into real solutions
+                        using technology and creativity.
+                    </p>
+                </div>
+
+                <div class="journey-card">
+                    <h3>D2T Venture</h3>
+
+                    <p>
+                        D2T Venture was created as a platform to bring my
+                        different interests together and create something
+                        meaningful for people.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Skills -->
+        <section>
+
+            <div class="section-title">
+                <h2>My <span>Skills</span></h2>
+                <p>Things I enjoy learning and working with.</p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>Python · Java · C · C++</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>HTML · CSS · JavaScript</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Analytics</h3>
+                    <p>Excel · Power BI · SQL · Tableau</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Development</h3>
+                    <p>Node.js · Express · MongoDB · MERN</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>AI & IoT</h3>
+                    <p>Artificial Intelligence · IoT · Deep Learning</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projects -->
+        <section>
+
+            <div class="section-title">
+                <h2>Featured <span>Projects</span></h2>
+                <p>Some of the work that represents my learning.</p>
+            </div>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <h3>Smart Landslide Detection</h3>
+
+                    <p>
+                        An IoT and deep learning based landslide detection
+                        and early warning system designed to monitor
+                        environmental conditions and identify potential
+                        landslide risks.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Spreading Smiles</h3>
+
+                    <p>
+                        A social initiative focused on spreading positivity,
+                        kindness and meaningful support through simple
+                        actions and community involvement.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>D2T Venture</h3>
+
+                    <p>
+                        A multi-purpose platform combining technology,
+                        creativity, motivation, healthcare awareness and
+                        social impact.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Closing -->
+        <section class="about-closing">
+
+            <h2>Creating. Connecting. Inspiring.</h2>
+
+            <p>
+                D2T Venture is just the beginning. My goal is to continue
+                learning, build meaningful projects and create something
+                that can make a positive difference.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 D2T Venture. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Mobile Menu -->
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>

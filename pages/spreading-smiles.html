@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>D2T Venture | Spreading Smiles</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* =========================================
+           SPREADING SMILES PAGE
+        ========================================= */
+
+        body {
+            background: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Floating Background */
+        .smiles-particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .smiles-particles span {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #d4af37;
+            border-radius: 50%;
+            opacity: 0.45;
+            animation: floatParticle 10s linear infinite;
+        }
+
+        .smiles-particles span:nth-child(1) {
+            left: 8%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .smiles-particles span:nth-child(2) {
+            left: 18%;
+            top: 70%;
+            animation-delay: 2s;
+        }
+
+        .smiles-particles span:nth-child(3) {
+            left: 32%;
+            top: 40%;
+            animation-delay: 4s;
+        }
+
+        .smiles-particles span:nth-child(4) {
+            left: 48%;
+            top: 80%;
+            animation-delay: 1s;
+        }
+
+        .smiles-particles span:nth-child(5) {
+            left: 62%;
+            top: 25%;
+            animation-delay: 3s;
+        }
+
+        .smiles-particles span:nth-child(6) {
+            left: 78%;
+            top: 65%;
+            animation-delay: 5s;
+        }
+
+        .smiles-particles span:nth-child(7) {
+            left: 90%;
+            top: 35%;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 0.5;
+            }
+
+            70% {
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateY(-120px);
+                opacity: 0;
+            }
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .smiles-hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 90px;
+            position: relative;
+        }
+
+        .smiles-hero-content {
+            max-width: 950px;
+        }
+
+        .smiles-small-title {
+            color: #d4af37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .smiles-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(42px, 7vw, 85px);
+            line-height: 1.05;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .smiles-hero h1 span {
+            color: #d4af37;
+        }
+
+        .smiles-hero-subtitle {
+            max-width: 720px;
+            margin: 30px auto 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            line-height: 1.9;
+            color: #cfcfcf;
+            font-weight: 300;
+        }
+
+        .smiles-hero-line {
+            width: 90px;
+            height: 2px;
+            background: #d4af37;
+            margin: 35px auto;
+        }
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .smiles-section {
+            padding: 100px 7%;
+        }
+
+        .smiles-section-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .smiles-section-heading .mini {
+            color: #d4af37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .smiles-section-heading h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(30px, 4vw, 48px);
+            margin: 15px 0;
+        }
+
+        .smiles-section-heading p {
+            max-width: 650px;
+            margin: auto;
+            color: #aaa;
+            line-height: 1.8;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .smiles-intro-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .smiles-card {
+            padding: 45px;
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,0.035),
+                rgba(212,175,55,0.025)
+            );
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .smiles-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 45px;
+            height: 2px;
+            background: #d4af37;
+        }
+
+        .smiles-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212,175,55,0.65);
+            box-shadow: 0 15px 45px rgba(212,175,55,0.08);
+        }
+
+        .smiles-card-number {
+            font-family: 'Cinzel', serif;
+            color: #d4af37;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .smiles-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .smiles-card p {
+            color: #aaa;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* =========================================
+           MISSION
+        ========================================= */
+
+        .smiles-mission {
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+        }
+
+        .smiles-mission-box {
+            max-width: 1050px;
+            margin: auto;
+            padding: 80px 40px;
+            border-top: 1px solid rgba(212,175,55,0.35);
+            border-bottom: 1px solid rgba(212,175,55,0.35);
+        }
+
+        .smiles-mission h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(30px, 5vw, 55px);
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+
+        .smiles-mission h2 span {
+            color: #d4af37;
+        }
+
+        .smiles-mission p {
+            max-width: 720px;
+            margin: auto;
+            color: #b8b8b8;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.9;
+        }
+
+        /* =========================================
+           VALUES
+        ========================================= */
+
+        .smiles-values {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .value-box {
+            text-align: center;
+            padding: 45px 25px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.015);
+            transition: 0.4s ease;
+        }
+
+        .value-box:hover {
+            border-color: rgba(212,175,55,0.5);
+            transform: translateY(-7px);
+        }
+
+        .value-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 25px;
+            border: 1px solid #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4af37;
+            font-size: 22px;
+        }
+
+        .value-box h3 {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 12px;
+        }
+
+        .value-box p {
+            color: #999;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* =========================================
+           HOW IT WORKS
+        ========================================= */
+
+        .smiles-process {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-item {
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .process-number {
+            font-family: 'Cinzel', serif;
+            font-size: 35px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .process-item h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .process-item p {
+            font-family: 'Montserrat', sans-serif;
+            color: #999;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* =========================================
+           QUOTE / IMPACT
+        ========================================= */
+
+        .smiles-quote {
+            padding: 120px 20px;
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212,175,55,0.07),
+                    transparent 60%
+                );
+        }
+
+        .smiles-quote h2 {
+            max-width: 850px;
+            margin: auto;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(27px, 4vw, 46px);
+            line-height: 1.5;
+        }
+
+        .smiles-quote h2 span {
+            color: #d4af37;
+        }
+
+        .smiles-quote p {
+            margin-top: 25px;
+            color: #999;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .smiles-cta {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .smiles-cta-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 65px 35px;
+            border: 1px solid rgba(212,175,55,0.3);
+            background: linear-gradient(
+                145deg,
+                rgba(212,175,55,0.06),
+                rgba(255,255,255,0.015)
+            );
+        }
+
+        .smiles-cta h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(28px, 4vw, 45px);
+            margin-bottom: 20px;
+        }
+
+        .smiles-cta p {
+            color: #aaa;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: auto auto 30px;
+        }
+
+        .smiles-button {
+            display: inline-block;
+            padding: 15px 35px;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+
+        .smiles-button:hover {
+            background: #d4af37;
+            color: #050505;
+            box-shadow: 0 10px 30px rgba(212,175,55,0.2);
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .smiles-intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .smiles-values {
+                grid-template-columns: 1fr;
+            }
+
+            .smiles-process {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .smiles-hero {
+                min-height: 80vh;
+                padding-top: 100px;
+            }
+
+            .smiles-section {
+                padding: 75px 6%;
+            }
+
+            .smiles-card {
+                padding: 32px 25px;
+            }
+
+            .smiles-mission-box {
+                padding: 60px 20px;
+            }
+
+            .smiles-process {
+                grid-template-columns: 1fr;
+            }
+
+            .smiles-quote {
+                padding: 80px 20px;
+            }
+
+            .smiles-cta {
+                padding: 70px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         FLOATING PARTICLES
+    ========================================== -->
+
+    <div class="smiles-particles">
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>•</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>•</span>
+        <span>✧</span>
+    </div>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="home.html" class="logo">
+                D2T VENTURE
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="home.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="spreading-smiles.html" class="active">
+                    Spreading Smiles
+                </a>
+
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO SECTION
+    ========================================== -->
+
+    <section class="smiles-hero">
+
+        <div class="smiles-hero-content">
+
+            <div class="smiles-small-title">
+                D2T COMMUNITY INITIATIVE
+            </div>
+
+            <h1>
+                SPREADING <span>SMILES.</span>
+            </h1>
+
+            <div class="smiles-hero-line"></div>
+
+            <p class="smiles-hero-subtitle">
+                A purpose-driven initiative built on a simple belief —
+                everyone deserves a little happiness, a little help,
+                and a little hope.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         INTRODUCTION
+    ========================================== -->
+
+    <section class="smiles-section">
+
+        <div class="smiles-section-heading">
+
+            <div class="mini">
+                WHY WE EXIST
+            </div>
+
+            <h2>
+                Small Steps. Big Impact.
+            </h2>
+
+            <p>
+                Spreading Smiles is more than an initiative.
+                It is our way of turning compassion into action
+                and making meaningful differences in everyday lives.
+            </p>
+
+        </div>
+
+
+        <div class="smiles-intro-grid">
+
+            <div class="smiles-card">
+
+                <div class="smiles-card-number">
+                    01
+                </div>
+
+                <h3>
+                    THE PURPOSE
+                </h3>
+
+                <p>
+                    To create moments of happiness and support
+                    for people who may need a helping hand,
+                    a kind gesture, or simply someone who cares.
+                </p>
+
+            </div>
+
+
+            <div class="smiles-card">
+
+                <div class="smiles-card-number">
+                    02
+                </div>
+
+                <h3>
+                    THE BELIEF
+                </h3>
+
+                <p>
+                    We believe that meaningful change does not
+                    always begin with something huge.
+                    Sometimes, one small act of kindness
+                    can create a lasting impact.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MISSION
+    ========================================== -->
+
+    <section class="smiles-mission">
+
+        <div class="smiles-mission-box">
+
+            <h2>
+                Bringing <span>Happiness.</span><br>
+                Offering <span>Help.</span><br>
+                Creating <span>Hope.</span>
+            </h2>
+
+            <p>
+                Through community support, thoughtful initiatives,
+                awareness and acts of kindness, Spreading Smiles
+                aims to make every contribution count.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         OUR VALUES
+    ========================================== -->
+
+    <section class="smiles-section">
+
+        <div class="smiles-section-heading">
+
+            <div class="mini">
+                WHAT DRIVES US
+            </div>
+
+            <h2>
+                More Than A Smile
+            </h2>
+
+            <p>
+                Every action is guided by values that make
+                compassion meaningful and sustainable.
+            </p>
+
+        </div>
+
+
+        <div class="smiles-values">
+
+            <div class="value-box">
+
+                <div class="value-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    KINDNESS
+                </h3>
+
+                <p>
+                    Choosing compassion even when the smallest
+                    gesture may seem insignificant.
+                </p>
+
+            </div>
+
+
+            <div class="value-box">
+
+                <div class="value-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    PURPOSE
+                </h3>
+
+                <p>
+                    Turning good intentions into actions that
+                    create meaningful value for others.
+                </p>
+
+            </div>
+
+
+            <div class="value-box">
+
+                <div class="value-icon">
+                    ∞
+                </div>
+
+                <h3>
+                    IMPACT
+                </h3>
+
+                <p>
+                    Creating a chain of positivity where one
+                    good action inspires another.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         HOW IT WORKS
+    ========================================== -->
+
+    <section class="smiles-section">
+
+        <div class="smiles-section-heading">
+
+            <div class="mini">
+                OUR APPROACH
+            </div>
+
+            <h2>
+                From Heart To Action
+            </h2>
+
+        </div>
+
+
+        <div class="smiles-process">
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    IDENTIFY
+                </h3>
+
+                <p>
+                    Understand where support
+                    and kindness can make a difference.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    CONNECT
+                </h3>
+
+                <p>
+                    Bring together people who care
+                    and communities that need support.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    ACT
+                </h3>
+
+                <p>
+                    Turn compassion into practical
+                    and meaningful action.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    INSPIRE
+                </h3>
+
+                <p>
+                    Encourage others to continue
+                    the cycle of kindness.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         QUOTE
+    ========================================== -->
+
+    <section class="smiles-quote">
+
+        <h2>
+            "A smile may be small,
+            but the <span>difference it creates</span>
+            can be enormous."
+        </h2>
+
+        <p>
+            — SPREADING SMILES
+        </p>
+
+    </section>
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="smiles-cta">
+
+        <div class="smiles-cta-box">
+
+            <h2>
+                Be Part Of The Smile.
+            </h2>
+
+            <p>
+                Whether it is through an idea, an initiative,
+                a contribution or simply an act of kindness —
+                every little effort matters.
+            </p>
+
+            <a href="contact.html" class="smiles-button">
+                Join The Journey
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <h3>
+                D2T VENTURE
+            </h3>
+
+            <p>
+                Create. Connect. Inspire.
+            </p>
+
+            <span>
+                © 2026 D2T Venture. All Rights Reserved.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         MOBILE MENU
+    ========================================== -->
+
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const mainNav = document.getElementById("mainNav");
+
+        menuToggle.addEventListener("click", () => {
+            mainNav.classList.toggle("open");
+        });
+
+    </script>
+
+</body>
+</html>
