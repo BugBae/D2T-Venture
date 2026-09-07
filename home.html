@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="D2T Venture — Create. Connect. Inspire."
+    >
+
+    <title>D2T Venture | Home</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main stylesheet -->
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <!-- ONLY FOR LEFT TOP SKETCH -->
+    <style>
+        .founder-sketch {
+            position: absolute;
+            top: 95px;
+            left: 35px;
+            z-index: 10;
+            width: 180px;
+        }
+
+        .founder-sketch img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.22));
+        }
+
+        @media (max-width: 800px) {
+            .founder-sketch {
+                top: 85px;
+                left: 20px;
+                width: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         FLOATING BACKGROUND ELEMENTS
+    ========================================== -->
+
+    <div
+        class="particles"
+        aria-hidden="true"
+    >
+
+        <span class="particle p1">✦</span>
+        <span class="particle p2">✧</span>
+        <span class="particle p3">✦</span>
+        <span class="particle p4">•</span>
+        <span class="particle p5">✧</span>
+        <span class="particle p6">✦</span>
+        <span class="particle p7">•</span>
+        <span class="particle p8">✧</span>
+
+    </div>
+
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="site-header">
+
+        <a
+            href="home.html"
+            class="site-logo"
+        >
+            D2T
+            <span>VENTURE</span>
+        </a>
+
+
+        <nav
+            class="main-nav"
+            aria-label="Main navigation"
+        >
+
+            <a
+                href="home.html"
+                class="active"
+            >
+                Home
+            </a>
+
+            <a href="about.html">
+                About Me
+            </a>
+
+            <a href="services.html">
+                What We Provide
+            </a>
+
+            <a href="spreading-smiles.html">
+                Spreading Smiles
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- Mobile menu button -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================================
+         LEFT-TOP FOUNDER SKETCH
+    ========================================== -->
+
+    <div class="founder-sketch">
+
+        <img
+            src="../images/d2t-sketch.png"
+            alt="D2T Venture founder portrait"
+        >
+
+    </div>
+
+
+
+    <!-- =========================================
+         HOME HERO
+    ========================================== -->
+
+    <main>
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+
+            <!-- Decorative glow -->
+
+            <div
+                class="hero-glow"
+                aria-hidden="true"
+            ></div>
+
+
+
+            <!-- Hero content -->
+
+            <div class="hero-content">
+
+
+                <p class="hero-eyebrow">
+
+                    CREATE
+                    <span>•</span>
+                    CONNECT
+                    <span>•</span>
+                    INSPIRE
+
+                </p>
+
+
+
+                <h1>
+
+                    Welcome to
+
+                    <strong>
+                        D2T
+                    </strong>
+
+                    <span>
+                        VENTURE
+                    </span>
+
+                </h1>
+
+
+
+                <p class="hero-description">
+
+                    A creative space where ideas find purpose,
+                    technology meets imagination, and meaningful
+                    initiatives are built to create an impact.
+
+                </p>
+
+
+
+                <!-- Primary navigation CTA -->
+
+                <div class="hero-actions">
+
+                    <a
+                        href="about.html"
+                        class="primary-btn"
+                    >
+
+                        Explore My Journey
+
+                        <span>→</span>
+
+                    </a>
+
+
+                    <a
+                        href="services.html"
+                        class="secondary-btn"
+                    >
+
+                        Discover D2T
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             INTERACTIVE QUOTE SECTION
+        ========================================== -->
+
+        <section
+            class="quote-section"
+            id="quote"
+        >
+
+            <div class="quote-content">
+
+                <p class="section-label">
+                    A LITTLE SOMETHING FOR YOU
+                </p>
+
+
+                <h2>
+                    Every idea begins
+                    <span>somewhere.</span>
+                </h2>
+
+
+                <p
+                    id="quoteText"
+                    class="quote-text"
+                >
+                    “You don't need to have everything figured out.
+                    Sometimes, you only need the courage to begin.”
+                </p>
+
+
+                <button
+                    type="button"
+                    id="quoteButton"
+                    class="quote-button"
+                >
+
+                    Give Me Another Thought
+
+                    <span>✦</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             QUICK EXPLORE
+        ========================================== -->
+
+        <section
+            class="explore-section"
+            id="explore"
+        >
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    EXPLORE D2T
+                </p>
+
+                <h2>
+                    Something worth
+                    <span>discovering.</span>
+                </h2>
+
+            </div>
+
+
+
+            <div class="explore-grid">
+
+
+                <!-- About -->
+
+                <a
+                    href="about.html"
+                    class="explore-card"
+                >
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                    <h3>
+                        About Me
+                    </h3>
+
+                    <p>
+                        Discover the person, journey,
+                        skills and projects behind D2T.
+                    </p>
+
+                    <span class="card-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- Services -->
+
+                <a
+                    href="services.html"
+                    class="explore-card"
+                >
+
+                    <span class="card-number">
+                        02
+                    </span>
+
+                    <h3>
+                        What We Provide
+                    </h3>
+
+                    <p>
+                        Explore the ideas, services and
+                        solutions created through D2T.
+                    </p>
+
+                    <span class="card-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- Spreading Smiles -->
+
+                <a
+                    href="spreading-smiles.html"
+                    class="explore-card"
+                >
+
+                    <span class="card-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Spreading Smiles
+                    </h3>
+
+                    <p>
+                        Step into a purpose-driven initiative
+                        created to turn kindness into impact.
+                    </p>
+
+                    <span class="card-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CLOSING CTA
+        ========================================== -->
+
+        <section
+            class="home-cta"
+        >
+
+            <p class="section-label">
+                YOUR NEXT STEP
+            </p>
+
+
+            <h2>
+                Let's create something
+                <span>meaningful.</span>
+            </h2>
+
+
+            <a
+                href="contact.html"
+                class="primary-btn"
+            >
+
+                Let's Connect
+
+                <span>→</span>
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <strong>D2T</strong>
+
+            <span>
+                VENTURE
+            </span>
+
+        </div>
+
+
+        <p>
+            Create. Connect. Inspire.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 D2T Venture. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         HOME PAGE SCRIPT
+    ========================================== -->
+
+    <script>
+
+        const quotes = [
+
+            "“You don't need to have everything figured out. Sometimes, you only need the courage to begin.”",
+
+            "“Small steps can become extraordinary journeys.”",
+
+            "“Create something that makes your future self proud.”",
+
+            "“Your ideas deserve a place in the world.”",
+
+            "“Purpose gives creativity a reason to exist.”"
+
+        ];
+
+
+        const quoteText =
+            document.getElementById("quoteText");
+
+        const quoteButton =
+            document.getElementById("quoteButton");
+
+
+        let quoteIndex = 0;
+
+
+        quoteButton.addEventListener(
+            "click",
+            () => {
+
+                quoteIndex =
+                    (quoteIndex + 1) % quotes.length;
+
+
+                quoteText.style.opacity = "0";
+
+
+                setTimeout(() => {
+
+                    quoteText.textContent =
+                        quotes[quoteIndex];
+
+                    quoteText.style.opacity = "1";
+
+                }, 250);
+
+            }
+        );
+
+
+
+        /* Mobile navigation */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const mainNav =
+            document.querySelector(".main-nav");
+
+
+        menuToggle.addEventListener(
+            "click",
+            () => {
+
+                const isOpen =
+                    mainNav.classList.toggle("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+            }
+        );
+
+
+        /* Close mobile menu after navigation */
+
+        document
+            .querySelectorAll(".main-nav a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        mainNav.classList.remove("open");
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+                );
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

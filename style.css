@@ -64,7 +64,6 @@ select {
         opacity: 0;
         transform: translateY(25px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -197,12 +196,10 @@ select {
         transform: translateY(0);
         opacity: 0.2;
     }
-
     50% {
         transform: translateY(-40px);
         opacity: 0.6;
     }
-
     100% {
         transform: translateY(0);
         opacity: 0.2;
@@ -370,7 +367,6 @@ body:has(.site-header) {
         transform: scale(1);
         opacity: 0.5;
     }
-
     50% {
         transform: scale(1.15);
         opacity: 0.8;
